@@ -1,12 +1,12 @@
 window.addEventListener("load", function(){
     alert("cargado");
 
-    document.getElementById('start-camera').addEventListener('click', () => {
+    //document.getElementById('start-camera').addEventListener('click', () => {
 
         if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
             alert('Tu navegador no soporta acceso a la cámara. Por favor, usa Chrome o Safari.');
           }
-          
+
         navigator.mediaDevices.getUserMedia({ video: true })
           .then((stream) => {
             // Permiso otorgado
@@ -20,5 +20,5 @@ window.addEventListener("load", function(){
             alert('No se pudo acceder a la cámara. Por favor verifica los permisos.');
             console.error(error);
           });
-      });
+    //});
 })
