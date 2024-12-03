@@ -8,16 +8,21 @@
   <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe-ar.min.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
-  <!-- AR.js Scene -->
-  <a-scene embedded arjs>
-    <!-- AR Marker -->
-    <a-marker preset="hiro">
-      <!-- 3D Model (a simple cube) -->
-      <a-box position="0 0.5 0" material="color: red;"></a-box>
-    </a-marker>
+    <div id="camera-permission" style="text-align: center; margin-top: 50px;">
+        <p>Este sitio necesita acceso a la cámara para continuar.</p>
+        <button id="start-camera">Permitir Cámara</button>
+      </div>
+    
+      <a-scene embedded arjs style="display: none;">
+        <!-- AR Marker -->
+        <a-marker preset="hiro">
+          <!-- 3D Model (a simple cube) -->
+          <a-box position="0 0.5 0" material="color: red;"></a-box>
+        </a-marker>
+        <!-- Camera -->
+        <a-entity camera></a-entity>
+      </a-scene>
 
-    <!-- Camera -->
-    <a-entity camera></a-entity>
-  </a-scene>
+  <script src="index.js"></script>
 </body>
 </html>
