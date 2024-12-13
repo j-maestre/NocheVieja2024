@@ -16,3 +16,10 @@
     font-size: 1.25em;
     color: white;
   }
+
+
+  .camera-container{
+    width: 100%;
+    border-width: 1px;
+    border-color: rgb(0, 255, 98);
+  }
