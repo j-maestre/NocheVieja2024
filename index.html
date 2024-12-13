@@ -13,19 +13,19 @@
 
 <body style="margin: 0; overflow: hidden;">
     <!-- Escena AR de A-Frame -->
-    <a-scene embedded arjs autofocus>
-      <!-- Marcador Hiro por defecto -->
-      <a-marker preset="hiro">
-        <!-- Cargar el modelo .obj con su .mtl si tiene materiales -->
+    <a-scene>
+        <a-light type="ambient" color="#888"></a-light>
+        <a-light type="directional" position="-1 1 1" intensity="0.5"></a-light>
 
-        <a-marker type="pattern" url="pattern_pato.patt">
-            <a-entity obj-model="obj: url(duck_sculpture.obj);" scale="0.1 0.1 0.1"></a-entity>
-          </a-marker>
-
-      </a-marker>
-
-      <!-- Cámara AR -->
-      <a-entity camera></a-entity>
+        <a-entity obj-model="obj: url(duck_sculpture.obj)" 
+                position="0 0 -2" 
+                rotation="0 0 0" 
+                scale="0.1 0.1 0.1">
+      </a-entity>
+      <a-entity position="0 1.6 0">
+          <!-- Cámara AR -->
+          <a-entity camera></a-entity>
+        </a-entity>
     </a-scene>
   </body>
 </html>
