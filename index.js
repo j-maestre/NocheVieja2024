@@ -1,6 +1,8 @@
 window.addEventListener("load", function(){
     alert("cargado");
 
+    let pato = this.document.getElementById("pato");
+
     //document.getElementById('start-camera').addEventListener('click', () => {
 
         if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
@@ -21,4 +23,8 @@ window.addEventListener("load", function(){
             console.error(error);
           });
     //});
+
+    setTimeout(function(){
+      pato.getAttribute('position').x +=0.5;
+    }, 500);
 })
