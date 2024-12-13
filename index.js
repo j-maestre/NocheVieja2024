@@ -25,6 +25,6 @@ window.addEventListener("load", function(){
     //});
 
     setTimeout(function(){
-      pato.getAttribute('position').x +=0.5;
+      //pato.getAttribute('position').x +=0.5;
     }, 500);
 })
