@@ -25,6 +25,6 @@ window.addEventListener("load", function(){
     //});
 
     setTimeout(function(){
-      //pato.getAttribute('position').x +=0.5;
-    }, 500);
+      pato.getAttribute('rotation').y += 0.5;
+    }, (1.0/60.0));
 })
